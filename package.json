@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npx wrangler versions upload --assets=./out"
   },
   "dependencies": {
     "eslint": "^10.0.2",
