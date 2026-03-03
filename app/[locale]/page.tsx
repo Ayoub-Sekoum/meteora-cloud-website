@@ -103,45 +103,49 @@ export default function Home() {
                         </div>
                     </h1>
 
-                    <FadeIn delay={0.5} className="mt-6">
-                        <p className="text-lg sm:text-xl md:text-2xl text-gray-500 max-w-3xl font-light leading-snug">
+                    <FadeIn delay={0.5} className="mt-8">
+                        <p className="text-xl sm:text-2xl md:text-[1.75rem] text-gray-600 max-w-4xl font-normal leading-relaxed tracking-tight">
                             {t("Hero.subtitle")}
                         </p>
                     </FadeIn>
 
-                    <FadeIn delay={0.6} className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                    <FadeIn delay={0.6} className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-8">
                         <Link href={`/${locale}#contatti`}>
-                            <Button variant="primary" size="lg" className="rounded-full px-8 py-6 text-base sm:text-lg group shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-out">
+                            <Button variant="primary" className="rounded-full px-10 py-7 text-lg sm:text-xl font-semibold group shadow-red-500/20 shadow-2xl hover:shadow-red-500/40 hover:scale-105 hover:-translate-y-1 transition-all duration-300 ease-out">
                                 {t("Hero.cta")}
-                                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1.5 transition-transform" />
                             </Button>
                         </Link>
-                        <div className="flex flex-wrap items-center gap-3 sm:gap-4 pl-0 sm:pl-6 sm:border-l border-gray-200">
-                            {[
-                                {
-                                    name: "AWS",
-                                    icon: <img src="/aws-icon.png" alt="AWS" className="w-5 h-5 object-contain" />,
-                                    bg: "hover:border-[#FF9900]/30"
-                                },
-                                {
-                                    name: "Azure",
-                                    icon: <img src="/azure-icon.png" alt="Azure" className="w-5 h-5 object-contain" />,
-                                    bg: "hover:border-[#0089D6]/30"
-                                },
-                                {
-                                    name: "Terraform",
-                                    icon: <img src="/terraform-icon.png" alt="Terraform" className="w-5 h-5 object-contain" />,
-                                    bg: "hover:border-[#844FBA]/30"
-                                }
-                            ].map((tech, i) => (
-                                <div
-                                    key={tech.name}
-                                    className={`flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl bg-white border border-gray-200 shadow-sm cursor-pointer transition-all duration-300 ${tech.bg}`}
-                                >
-                                    {tech.icon}
-                                    <span className="text-sm font-medium text-gray-700">{tech.name}</span>
-                                </div>
-                            ))}
+
+                        <div className="flex flex-col gap-2 pl-0 sm:pl-8 sm:border-l-2 border-gray-200/60">
+                            <span className="text-sm font-semibold text-gray-400 uppercase tracking-widest">Powered by</span>
+                            <div className="flex flex-wrap items-center gap-3">
+                                {[
+                                    {
+                                        name: "AWS",
+                                        icon: <img src="/aws-icon.png" alt="AWS" className="w-6 h-6 object-contain drop-shadow-sm" />,
+                                        bg: "hover:bg-[#FF9900]/10 hover:border-[#FF9900]/40 border-gray-200/80 bg-white"
+                                    },
+                                    {
+                                        name: "Azure",
+                                        icon: <img src="/azure-icon.png" alt="Azure" className="w-6 h-6 object-contain drop-shadow-sm" />,
+                                        bg: "hover:bg-[#0089D6]/10 hover:border-[#0089D6]/40 border-gray-200/80 bg-white"
+                                    },
+                                    {
+                                        name: "Terraform",
+                                        icon: <img src="/terraform-icon.png" alt="Terraform" className="w-6 h-6 object-contain drop-shadow-sm" />,
+                                        bg: "hover:bg-[#844FBA]/10 hover:border-[#844FBA]/40 border-gray-200/80 bg-white"
+                                    }
+                                ].map((tech) => (
+                                    <div
+                                        key={tech.name}
+                                        className={`flex items-center justify-center gap-3 px-4 py-2.5 rounded-xl border shadow-sm cursor-pointer transition-all duration-300 ${tech.bg}`}
+                                    >
+                                        {tech.icon}
+                                        <span className="text-base font-semibold text-gray-700">{tech.name}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </FadeIn>
                 </motion.div>
