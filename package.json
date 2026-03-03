@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && echo \"<meta http-equiv='refresh' content='0;url=/it' />\" > out/index.html",
     "start": "next start",
     "lint": "next lint",
     "deploy": "npx wrangler versions upload --assets=./out"
