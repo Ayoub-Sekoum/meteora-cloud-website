@@ -1,0 +1,5 @@
+name = "meteora-cloud-website"
+compatibility_date = "2024-11-20"
+
+[assets]
+directory = "./out"
