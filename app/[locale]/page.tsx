@@ -134,17 +134,13 @@ export default function Home() {
                                     bg: "hover:border-[#844FBA]/30"
                                 }
                             ].map((tech, i) => (
-                                <motion.div
+                                <div
                                     key={tech.name}
-                                    initial={{ opacity: 0, y: 15 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: 0.7 + i * 0.15, duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
-                                    whileHover={{ scale: 1.05, y: -2 }}
                                     className={`flex items-center justify-center gap-2.5 px-4 py-2.5 rounded-xl bg-white border border-gray-200 shadow-sm cursor-pointer transition-all duration-300 ${tech.bg}`}
                                 >
                                     {tech.icon}
                                     <span className="text-sm font-medium text-gray-700">{tech.name}</span>
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
                     </FadeIn>
