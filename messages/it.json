@@ -1,0 +1,105 @@
+{
+    "Hero": {
+        "badge": "Cloud Architecture Experts",
+        "title1": "Architetture",
+        "title2": "Cloud",
+        "title2b": "di Livello",
+        "title3": "Enterprise.",
+        "subtitle": "Zero downtime. Prestazioni assolute. Riduzione dei costi garantita. Studiamo e implementiamo infrastrutture IT definitive per CEO, CTO e IT Manager.",
+        "cta": "Prenota una Consulenza"
+    },
+    "Services": {
+        "heading": "Soluzioni",
+        "headingFaded": "Verticali",
+        "cloud_title": "Cloud Architecture",
+        "cloud_desc": "Infrastrutture scalabili su AWS e Azure, progettate per zero downtime e massime performance.",
+        "security_title": "Security & Compliance",
+        "security_desc": "Audit di sicurezza avanzati, hardening dell'infrastruttura e allineamento agli standard ISO/GDPR.",
+        "finops_title": "FinOps Optimization",
+        "finops_desc": "Analisi chirurgica dei costi cloud per eliminare gli sprechi e massimizzare il ROI IT.",
+        "devops_title": "DevOps Automations",
+        "devops_desc": "Pipeline CI/CD, Containerizzazione e migrazioni verso architetture Serverless di ultima generazione."
+    },
+    "About": {
+        "role": "Lead Cloud Architect",
+        "quote": "La tecnologia non deve essere un vincolo o una scatola nera costosa, ma il più grande vantaggio competitivo per la tua azienda. Progetto le fondamenta IT in cui il tuo business scalerà nei prossimi 10 anni."
+    },
+    "Contact": {
+        "heading": "Iniziamo",
+        "headingFaded": "il progetto.",
+        "subtitle": "Compila il modulo o inviaci un'email. Rispondiamo entro 24 ore con un piano d'azione conciso.",
+        "labelName": "Nome",
+        "labelEmail": "Email",
+        "labelMessage": "Di cosa hai bisogno?",
+        "placeholderName": "Mario Rossi",
+        "placeholderEmail": "mario@azienda.it",
+        "placeholderMessage": "Parliamo del tuo progetto...",
+        "send": "Invia Richiesta"
+    },
+    "Nav": {
+        "contact": "Contattaci"
+    },
+    "Common": {
+        "backHome": "Torna alla Home",
+        "talkToArchitect": "Parla con un Architetto"
+    },
+    "Footer": {
+        "description": "Cloud Architecture & Consulting. Progettiamo infrastrutture scalabili, sicure e ottimizzate per il tuo business.",
+        "servicesTitle": "Servizi",
+        "contactTitle": "Contatti",
+        "requestConsultation": "Richiedi una consulenza",
+        "responseTime": "Rispondiamo entro 24 ore lavorative.",
+        "rights": "Tutti i diritti riservati.",
+        "privacy": "Privacy Policy"
+    },
+    "CloudPage": {
+        "badge": "Cloud Architecture: AWS & Azure",
+        "title": "Infrastrutture Enterprise per PMI e Startup.",
+        "intro": "Niente più server fisici obsoleti nei sottoscala o hosting condivisi lenti. Portiamo i tuoi applicativi, gestionali e siti web su architetture Cloud distribuite che scalano automaticamente in base al traffico.",
+        "awsTitle": "Amazon Web Services (AWS)",
+        "awsDesc": "Progettiamo la tua infrastruttura sulle stesse tecnologie usate da Netflix e Amazon. Utilizziamo architetture multi-AZ (Availability Zones) per garantire lo 0% di downtime: se un data center va giù, il tuo sito continua a funzionare dal data center gemellino a 10 km di distanza.",
+        "azureTitle": "Microsoft Azure",
+        "azureDesc": "Lavori in ecosistema Microsoft? Progettiamo migrazioni fluide di Active Directory verso Entra ID, spostiamo i tuoi SQL Server su Database Gestiti e facciamo scalare i tuoi applicativi .NET su Azure App Service. Perfetta integrazione B2B.",
+        "migrationTitle": "Cloud-to-Cloud Migration",
+        "migrationDesc": "Sei già sul Cloud ma i costi sono fuori controllo, le performance non rispecchiano le aspettative, o il tuo fornitore ha cambiato le regole del gioco? Progettiamo e realizziamo strategie di migrazione Cloud-to-Cloud (es. da AWS ad Azure o viceversa). Ci occupiamo di riscrivere l'architettura per adattarla al nuovo provider, evitando il \"lift and shift\" passivo e garantendo una transizione a zero downtime.",
+        "ctaTitle": "Vuoi modernizzare la tua architettura IT?",
+        "ctaDesc": "Parlaci del tuo attuale setup e noi disegneremo l'architettura Cloud perfetta per sostenere la tua crescita.",
+        "ctaButton": "Parla con un Architetto"
+    },
+    "SecurityPage": {
+        "badge": "Security Audit & Compliance",
+        "title": "Trova le vulnerabilità prima degli hacker.",
+        "intro": "Le architetture Cloud moderne offrono strumenti di sicurezza potentissimi, ma il 90% delle violazioni di dati avviene a causa di una configurazione errata da parte del cliente (misconfiguration).",
+        "vaTitle": "Vulnerability Assessment",
+        "vaDesc": "Analizziamo la tua infrastruttura alla ricerca di porte aperte, ruoli IAM con permessi eccessivi e database non criptati. Forniamo un report dettagliato con le criticità ordinate per rischio.",
+        "complianceTitle": "Compliance GDPR & ISO",
+        "complianceDesc": "Garantiamo che i dati dei tuoi clienti rimangano nei confini europei, siano crittografati a riposo (KMS) e in transito, preparandoti per le verifiche di conformità aziendale.",
+        "ctaTitle": "Metti in sicurezza i tuoi dati",
+        "ctaDesc": "Prenota una consulenza tecnica per scoprire quanto è sicura la tua attuale infrastruttura e come chiudere le falle.",
+        "ctaButton": "Richiedi un Audit"
+    },
+    "FinOpsPage": {
+        "badge": "FinOps & Cost Optimization",
+        "title": "Taglia il costo delle bollette Cloud.",
+        "intro": "Pagare 5.000€ al mese di server AWS e non sapere il perché è un problema fin troppo comune. Analizziamo i tuoi costi riga per riga per eliminare gli sprechi invisibili.",
+        "wasteTitle": "Waste Analysis",
+        "wasteDesc": "Individuiamo server sovradimensionati, risorse \"orfane\" dimenticate accese, indirizzi IP non utilizzati e snapshot inutili che stanno gonfiando la fattura.",
+        "planTitle": "Cost Planning",
+        "planDesc": "Ristrutturiamo l'architettura per sfruttare istanze Spot o Savings Plans, facendoti risparmiare fino al 40% senza sacrificare 1 millisecondo di performance.",
+        "ctaTitle": "Non buttare soldi dalla finestra",
+        "ctaDesc": "Richiedi un'analisi senza impegno delle tue ultime fatture Cloud.",
+        "ctaButton": "Richiedi Analisi FinOps"
+    },
+    "DevOpsPage": {
+        "badge": "DevOps & Serverless",
+        "title": "Rilasci software in minuti, non mesi.",
+        "intro": "Basta con i rilasci notturni che bloccano l'azienda. Automatizziamo tutto il ciclo di vita del codice dalla tastiera dello sviluppatore fino alla produzione.",
+        "cicdTitle": "CI/CD Pipeline",
+        "cicdDesc": "Creiamo pipeline automatiche (es. GitHub Actions o GitLab CI) che testano, validano e mettono in produzione il tuo codice in pochi minuti a ogni commit.",
+        "serverlessTitle": "Serverless Architecture",
+        "serverlessDesc": "Riscriviamo i tuoi componenti in Lambda function o Container Fargate che si spengono a zero quando non usati e scalano all'infinito durante i picchi di traffico.",
+        "ctaTitle": "Accelera il tuo Team di sviluppo",
+        "ctaDesc": "Raccontaci i colli di bottiglia attuali e progettiamo un flusso DevOps su misura.",
+        "ctaButton": "Inizia l'Automazione"
+    }
+}

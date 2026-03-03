@@ -1,0 +1,105 @@
+{
+    "Hero": {
+        "badge": "Cloud Architecture Experts",
+        "title1": "Enterprise",
+        "title2": "Cloud",
+        "title2b": "Grade",
+        "title3": "Architecture.",
+        "subtitle": "Zero downtime. Maximum performance. Guaranteed cost reduction. We design and implement definitive IT infrastructure for CEOs, CTOs, and IT Managers.",
+        "cta": "Book a Consultation"
+    },
+    "Services": {
+        "heading": "Our",
+        "headingFaded": "Solutions",
+        "cloud_title": "Cloud Architecture",
+        "cloud_desc": "Scalable infrastructure on AWS and Azure, designed for zero downtime and maximum performance.",
+        "security_title": "Security & Compliance",
+        "security_desc": "Advanced security audits, infrastructure hardening, and alignment with ISO/GDPR standards.",
+        "finops_title": "FinOps Optimization",
+        "finops_desc": "Surgical cloud cost analysis to eliminate waste and maximize IT ROI.",
+        "devops_title": "DevOps Automations",
+        "devops_desc": "CI/CD Pipelines, Containerization, and migrations to next-generation Serverless architectures."
+    },
+    "About": {
+        "role": "Lead Cloud Architect",
+        "quote": "Technology should not be a constraint or an expensive black box, but the greatest competitive advantage for your company. I design the IT foundations on which your business will scale for the next 10 years."
+    },
+    "Contact": {
+        "heading": "Let's start",
+        "headingFaded": "the project.",
+        "subtitle": "Fill out the form or email us. We respond within 24 hours with a concise action plan.",
+        "labelName": "Name",
+        "labelEmail": "Email",
+        "labelMessage": "What do you need?",
+        "placeholderName": "John Doe",
+        "placeholderEmail": "john@company.com",
+        "placeholderMessage": "Tell us about your project...",
+        "send": "Send Request"
+    },
+    "Nav": {
+        "contact": "Contact Us"
+    },
+    "Common": {
+        "backHome": "Back to Home",
+        "talkToArchitect": "Talk to an Architect"
+    },
+    "Footer": {
+        "description": "Cloud Architecture & Consulting. We design scalable, secure, and optimized infrastructure for your business.",
+        "servicesTitle": "Services",
+        "contactTitle": "Contact",
+        "requestConsultation": "Request a consultation",
+        "responseTime": "We respond within 24 business hours.",
+        "rights": "All rights reserved.",
+        "privacy": "Privacy Policy"
+    },
+    "CloudPage": {
+        "badge": "Cloud Architecture: AWS & Azure",
+        "title": "Enterprise Infrastructure for SMBs and Startups.",
+        "intro": "No more obsolete physical servers in basements or slow shared hosting. We move your applications, ERPs, and websites to distributed Cloud architectures that scale automatically based on traffic.",
+        "awsTitle": "Amazon Web Services (AWS)",
+        "awsDesc": "We design your infrastructure on the same technologies used by Netflix and Amazon. We use multi-AZ (Availability Zones) architectures to guarantee 0% downtime: if one data center goes down, your site keeps running from the twin data center 10 km away.",
+        "azureTitle": "Microsoft Azure",
+        "azureDesc": "Working in the Microsoft ecosystem? We design fluid migrations from Active Directory to Entra ID, move your SQL Servers to Managed Databases, and scale your .NET applications on Azure App Service. Perfect B2B integration.",
+        "migrationTitle": "Cloud-to-Cloud Migration",
+        "migrationDesc": "Already on the Cloud but costs are out of control, performance doesn't meet expectations, or your provider changed the rules? We design and execute Cloud-to-Cloud migration strategies (e.g., from AWS to Azure or vice versa). We rewrite the architecture to adapt it to the new provider, avoiding passive \"lift and shift\" and guaranteeing a zero-downtime transition.",
+        "ctaTitle": "Want to modernize your IT architecture?",
+        "ctaDesc": "Tell us about your current setup and we'll design the perfect Cloud architecture to support your growth.",
+        "ctaButton": "Talk to an Architect"
+    },
+    "SecurityPage": {
+        "badge": "Security Audit & Compliance",
+        "title": "Find vulnerabilities before hackers do.",
+        "intro": "Modern Cloud architectures offer powerful security tools, but 90% of data breaches occur due to client-side misconfiguration.",
+        "vaTitle": "Vulnerability Assessment",
+        "vaDesc": "We analyze your infrastructure for open ports, IAM roles with excessive permissions, and unencrypted databases. We provide a detailed report with issues ranked by risk.",
+        "complianceTitle": "Compliance GDPR & ISO",
+        "complianceDesc": "We ensure your clients' data stays within European borders, encrypted at rest (KMS) and in transit, preparing you for corporate compliance audits.",
+        "ctaTitle": "Secure your data",
+        "ctaDesc": "Book a technical consultation to discover how secure your current infrastructure is and how to close the gaps.",
+        "ctaButton": "Request an Audit"
+    },
+    "FinOpsPage": {
+        "badge": "FinOps & Cost Optimization",
+        "title": "Cut your Cloud bills down to size.",
+        "intro": "Paying €5,000/month for AWS servers without knowing why is an all-too-common problem. We analyze your costs line by line to eliminate invisible waste.",
+        "wasteTitle": "Waste Analysis",
+        "wasteDesc": "We identify oversized servers, forgotten \"orphan\" resources left running, unused IP addresses, and useless snapshots inflating your bill.",
+        "planTitle": "Cost Planning",
+        "planDesc": "We restructure the architecture to leverage Spot instances or Savings Plans, saving you up to 40% without sacrificing a single millisecond of performance.",
+        "ctaTitle": "Stop throwing money out the window",
+        "ctaDesc": "Request a no-obligation analysis of your latest Cloud invoices.",
+        "ctaButton": "Request FinOps Analysis"
+    },
+    "DevOpsPage": {
+        "badge": "DevOps & Serverless",
+        "title": "Release software in minutes, not months.",
+        "intro": "No more nightly releases that block the company. We automate the entire code lifecycle from the developer's keyboard to production.",
+        "cicdTitle": "CI/CD Pipeline",
+        "cicdDesc": "We create automated pipelines (e.g., GitHub Actions or GitLab CI) that test, validate, and deploy your code to production in minutes with every commit.",
+        "serverlessTitle": "Serverless Architecture",
+        "serverlessDesc": "We rewrite your components into Lambda functions or Fargate Containers that scale to zero when idle and scale infinitely during traffic spikes.",
+        "ctaTitle": "Accelerate your Development Team",
+        "ctaDesc": "Tell us about your current bottlenecks and we'll design a custom DevOps workflow.",
+        "ctaButton": "Start Automating"
+    }
+}
