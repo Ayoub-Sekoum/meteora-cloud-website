@@ -1,0 +1,37 @@
+Ecco esattamente cosa ho fatto per risolvere i 3 problemi principali che avevamo:
+
+1. Il problema delle icone rotte
+Gli SVG originali di AWS, Azure e Terraform avevano dei valori di coordinate (viewBox) sballati o incompatibili con Tailwind, per questo a volte sparivano o si vedevano tagliati. Soluzione: Ho rimosso completamente gli SVG e ho copiato le tue immagini PNG ufficiali (
+
+aws-icon.png
+, 
+
+azure-icon.png
+, terraform-icon.png) nella cartella public/, poi ho aggiornato il codice per usare i tag <img>. Ora sono pixel-perfect e non si deformeranno mai.
+
+2. Il problema del Deploy fallito su Cloudflare (npm ci ed eslint)
+Ogni volta che Cloudflare provava a installare le librerie, si bloccava per colpa dei "conflitti tra dipendenze". Nel tuo progetto avevi installato eslint alla versione 10, ma Next.js (tramite eslint-config-next) supporta ufficialmente solo fino alla versione 9. Soluzione: Ho declassato intenzionalmente la libreria con npm install eslint@9 --save. Cloudflare ora riesce a ricostruire l'albero delle dipendenze senza mostrare errori ERESOLVE.
+
+3. La famosa pagina bianca (Errore 404) sul sito live
+Quando ho fatto il deploy manuale forzato, la build ha funzionato ma il sito dava uno squallido errore 404 (Not Found). Perché? Perché stai usando next-intl per le lingue (IT, EN, DE). Quando Next.js "esporta" il sito in HTML statico per Cloudflare Pages, crea le cartelle per /it, /en, e /de, ma non crea una Home Page principale (alla radice del sito, ovvero /). Quindi quando andavi su meteora-cloud-website..., Worker non trovava niente sulla root. Soluzione: Ho creato un "hack" intelligente nel file 
+
+package.json
+. Ho cambiato il comando di build così:
+
+json
+"build": "next build && echo \"<meta http-equiv='refresh' content='0;url=/it' />\" > out/index.html"
+Cosa fa?
+
+Next.js costruisce normalmente tutte le pagine;
+Appena ha finito, il comando crea istantaneamente un file 
+
+index.html
+ nella cartella 
+
+out
+ (quella che viene caricata su Cloudflare);
+Quel file contiene un comando HTML istantaneo che dice al browser: "Attenzione, spostati istantaneamente su /it !";
+Così facendo, Cloudflare ora serve un file quando qualcuno digita il tuo dominio normale, e l'utente viene sbattutto in un millisecondo sulla versione in Italiano.
+
+Il sito è adesso rock-solid! C'è altro su cui vuoi lavorare oggi?
+
