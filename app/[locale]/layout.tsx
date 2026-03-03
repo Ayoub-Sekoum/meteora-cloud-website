@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import "../globals.css";
-import { unstable_setRequestLocale, getMessages } from "next-intl/server";
+import { setRequestLocale, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { CookieBanner } from "@/components/CookieBanner";
 import { Navbar } from "@/components/Navbar";
@@ -27,12 +27,13 @@ export function generateStaticParams() {
 
 export default async function RootLayout({
     children,
-    params: { locale },
+    params,
 }: {
     children: React.ReactNode;
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }) {
-    unstable_setRequestLocale(locale);
+    const { locale } = await params;
+    setRequestLocale(locale);
     const messages = await getMessages({ locale });
 
     return (
