@@ -6,5 +6,5 @@ variable "domain_name" {
 variable "email_contact" {
   description = "Indirizzo email per i contatti"
   type        = string
-  default = "leads@metteora.uk" # Sostituire
+  default = "info@metteora.uk" # Sostituire
 }
