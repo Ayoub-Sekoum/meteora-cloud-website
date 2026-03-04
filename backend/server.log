@@ -1,0 +1,29 @@
+ΓÜá∩╕Å  Google Drive credentials non trovate: C:\Temp\Sito-mio\backend\credentials.json
+   Il caricamento file su Drive sar├á disabilitato.
+   Crea un Service Account e scarica il JSON nelle credenziali.
+(node:12316) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+≡ƒÜÇ Meteora Backend attivo su http://localhost:3002
+   POST /api/contact  ΓåÆ Form di contatto
+   GET  /api/health   ΓåÆ Stato del server
+
+   Email: undefined
+   Drive: ΓÜá∩╕Å  Non configurato
+
+
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+≡ƒô⌐ Nuovo contatto: Test (Tester)
+   Email: test@example.com
+ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+Γ¥î Errore generico: ReferenceError: cognome is not defined
+    at C:\Temp\Sito-mio\backend\server.js:293:21
+    at Layer.handle [as handle_request] (C:\Temp\Sito-mio\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Temp\Sito-mio\backend\node_modules\express\lib\router\route.js:149:13)
+    at multerMiddleware (C:\Temp\Sito-mio\backend\node_modules\multer\lib\make-middleware.js:13:41)
+    at Layer.handle [as handle_request] (C:\Temp\Sito-mio\backend\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Temp\Sito-mio\backend\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Temp\Sito-mio\backend\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Temp\Sito-mio\backend\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Temp\Sito-mio\backend\node_modules\express\lib\router\index.js:284:15
+    at router.process_params (C:\Temp\Sito-mio\backend\node_modules\express\lib\router\index.js:346:12)

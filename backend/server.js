@@ -14,7 +14,7 @@ const fs = require('fs');
 const stream = require('stream');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 // ─── CORS ────────────────────────────────────────────────
 app.use(cors({
@@ -57,13 +57,13 @@ function initGoogleDrive() {
 }
 
 // ─── Crea sottocartella su Drive con data + info cliente ─
-async function createDriveFolder(nome, cognome) {
+async function createDriveFolder(nome) {
     if (!driveClient) return null;
 
     const date = new Date();
     const dateStr = date.toISOString().split('T')[0]; // YYYY-MM-DD
     const timeStr = date.toTimeString().split(' ')[0].replace(/:/g, '-'); // HH-MM-SS
-    const folderName = `${dateStr}_${timeStr}_${nome}_${cognome}`;
+    const folderName = `${dateStr}_${timeStr}_${nome}`;
 
     try {
         const response = await driveClient.files.create({
@@ -175,15 +175,15 @@ ${fileInfo?.viewLink ? `📄 Vedi file: ${fileInfo.viewLink}` : ''}
             <table style="width: 100%; border-collapse: separate; border-spacing: 0 12px;">
                 <tr>
                     <td style="color: #6b7280; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; padding: 4px 0;">Nome</td>
-                    <td style="font-size: 16px; font-weight: 600; color: #111827; text-align: right;">${data.nome} ${data.cognome}</td>
+                    <td style="font-size: 16px; font-weight: 600; color: #111827; text-align: right;">${data.nome}</td>
                 </tr>
                 <tr>
                     <td style="color: #6b7280; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; padding: 4px 0;">Email</td>
                     <td style="font-size: 16px; color: #111827; text-align: right;"><a href="mailto:${data.email}" style="color: #dc2626; text-decoration: none;">${data.email}</a></td>
                 </tr>
                 <tr>
-                    <td style="color: #6b7280; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; padding: 4px 0;">Telefono</td>
-                    <td style="font-size: 16px; color: #111827; text-align: right;"><a href="tel:${data.telefono}" style="color: #111827; text-decoration: none;">${data.telefono}</a></td>
+                    <td style="color: #6b7280; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; padding: 4px 0;">Ruolo Aziendale</td>
+                    <td style="font-size: 16px; color: #111827; text-align: right;">${data.ruolo}</td>
                 </tr>
             </table>
 
@@ -216,14 +216,14 @@ ${fileInfo?.viewLink ? `📄 Vedi file: ${fileInfo.viewLink}` : ''}
     const mailOptions = {
         from: `"Meteora Cloud" <${process.env.GMAIL_USER}>`,
         to: process.env.GMAIL_USER,
-        subject: `🔔 Nuovo Contatto: ${data.nome} ${data.cognome}`,
+        subject: `🔔 Nuovo Contatto: ${data.nome} (${data.ruolo})`,
         text: `
 NUOVO CONTATTO - METEORA CLOUD
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-👤 Nome: ${data.nome} ${data.cognome}
+👤 Nome: ${data.nome}
+🏢 Ruolo: ${data.ruolo}
 📧 Email: ${data.email}
-📞 Telefono: ${data.telefono}
 
 💬 MESSAGGIO:
 ${data.messaggio}
@@ -249,37 +249,28 @@ Inviato dal form di contatto di Meteora Cloud
 // ═══════════════════════════════════════════════════════════
 app.post('/api/contact', upload.single('file'), async (req, res) => {
     try {
-        const { nome, cognome, email, telefono, messaggio } = req.body;
+        const { nome, email, ruolo, messaggio } = req.body;
 
         // Validazione
-        if (!nome || !cognome || !email || !telefono || !messaggio) {
+        if (!nome || !email || !ruolo || !messaggio) {
             return res.status(400).json({
                 success: false,
-                message: 'Tutti i campi sono obbligatori.',
+                message: 'Tutti i campi (Nome, Email, Ruolo, Messaggio) sono obbligatori.',
             });
         }
 
-        // Validazione lettere per nome/cognome
+        // Validazione lettere per nome (può contenere spazi, apostrofi)
         const lettersOnly = /^[A-Za-zÀ-ÿ\s'-]+$/;
-        if (!lettersOnly.test(nome) || !lettersOnly.test(cognome)) {
+        if (!lettersOnly.test(nome)) {
             return res.status(400).json({
                 success: false,
-                message: 'Nome e Cognome devono contenere solo lettere.',
-            });
-        }
-
-        // Validazione numeri per telefono
-        const numbersOnly = /^[0-9+\s()-]+$/;
-        if (!numbersOnly.test(telefono)) {
-            return res.status(400).json({
-                success: false,
-                message: 'Il telefono deve contenere solo numeri.',
+                message: 'Il nome deve contenere solo lettere.',
             });
         }
 
         console.log('\n═══════════════════════════════════════');
-        console.log(`📩 Nuovo contatto: ${nome} ${cognome}`);
-        console.log(`   Email: ${email} | Tel: ${telefono}`);
+        console.log(`📩 Nuovo contatto: ${nome} (${ruolo})`);
+        console.log(`   Email: ${email}`);
         console.log('═══════════════════════════════════════');
 
         let driveFolder = null;
@@ -289,8 +280,7 @@ app.post('/api/contact', upload.single('file'), async (req, res) => {
         if (req.file) {
             console.log(`📎 File ricevuto: ${req.file.originalname} (${(req.file.size / 1024 / 1024).toFixed(2)} MB)`);
 
-            // Crea sottocartella con data + nome cliente
-            driveFolder = await createDriveFolder(nome, cognome);
+            driveFolder = await createDriveFolder(nome);
 
             if (driveFolder) {
                 // Carica il file nella sottocartella
@@ -300,7 +290,7 @@ app.post('/api/contact', upload.single('file'), async (req, res) => {
 
         // Invia email di notifica
         const emailSent = await sendNotificationEmail(
-            { nome, cognome, email, telefono, messaggio },
+            { nome, ruolo, email, messaggio },
             driveFolder,
             fileInfo
         );

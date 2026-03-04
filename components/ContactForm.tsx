@@ -19,8 +19,9 @@ export function ContactForm() {
         };
 
         try {
-            // Qui il Frontend invia i dati al Backend (/api/contact)
-            const response = await fetch("/api/contact", {
+            // Frontend sends data to the absolute Backend URL, defaulting to local port 3001
+            const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL?.replace(/\/$/, '') || "http://localhost:3002";
+            const response = await fetch(`${backendUrl}/api/contact`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
