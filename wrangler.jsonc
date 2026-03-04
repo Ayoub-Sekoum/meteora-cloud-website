@@ -1,5 +1,5 @@
 {
-    "name": "meteora-cloud-website",
+    "name": "meteora-website-public",
     "compatibility_date": "2024-11-20",
     "assets": {
         "directory": "./out"
