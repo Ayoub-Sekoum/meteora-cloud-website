@@ -6,7 +6,8 @@
         "title2b": "di Livello",
         "title3": "Enterprise.",
         "subtitle": "Infrastrutture IT definitive per CEO, CTO e IT Manager. Zero downtime e prestazioni assolute.",
-        "cta": "Prenota una Consulenza"
+        "cta": "Prenota una Consulenza",
+        "socialProof": "Architetture cloud su piattaforme leader"
     },
     "Services": {
         "heading": "Soluzioni",
@@ -29,19 +30,36 @@
         "headingFaded": "il progetto.",
         "subtitle": "Compila il modulo o inviaci un'email. Rispondiamo entro 24 ore con un piano d'azione conciso.",
         "labelName": "Nome",
+        "labelSurname": "Cognome",
         "labelEmail": "Email",
+        "labelPhone": "Telefono",
         "labelMessage": "Di cosa hai bisogno?",
-        "placeholderName": "Mario Rossi",
+        "labelUpload": "Carica file",
+        "placeholderName": "Mario",
+        "placeholderSurname": "Rossi",
         "placeholderEmail": "mario@azienda.it",
+        "placeholderPhone": "+39 333 1234567",
         "placeholderMessage": "Parliamo del tuo progetto...",
-        "send": "Invia Richiesta"
+        "uploadHint": "Trascina qui i file o clicca per selezionarli (max 30MB)",
+        "uploadSelected": "File selezionato",
+        "send": "Invia Richiesta",
+        "sending": "Invio in corso...",
+        "sent": "Richiesta Inviata!",
+        "errorSend": "C'è stato un errore nell'invio. Riprova.",
+        "errorFileSize": "Il file supera il limite di 30MB.",
+        "errorNameLetters": "Il nome deve contenere solo lettere.",
+        "errorSurnameLetters": "Il cognome deve contenere solo lettere.",
+        "errorPhoneNumbers": "Il telefono deve contenere solo numeri.",
+        "errorEmail": "Inserisci un indirizzo email valido con @.",
+        "privacy": "Inviando il modulo accetti la nostra Privacy Policy in conformità con il GDPR."
     },
     "Nav": {
         "contact": "Contattaci"
     },
     "Common": {
         "backHome": "Torna alla Home",
-        "talkToArchitect": "Parla con un Architetto"
+        "talkToArchitect": "Parla con un Architetto",
+        "skipToContent": "Passa al contenuto principale"
     },
     "Footer": {
         "description": "Cloud Architecture & Consulting. Progettiamo infrastrutture scalabili, sicure e ottimizzate per il tuo business.",

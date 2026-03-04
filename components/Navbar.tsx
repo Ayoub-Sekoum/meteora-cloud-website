@@ -39,18 +39,23 @@ export function Navbar() {
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled
-                    ? "bg-white/90 backdrop-blur-xl border-b border-gray-200 shadow-sm"
-                    : "bg-transparent"
+                className={`fixed top-0 w-full z-50 transition-all duration-500 flex justify-center ${scrolled
+                    ? "py-2 md:py-4"
+                    : "py-0"
                     }`}
             >
-                <div className="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center h-16 md:h-20">
+                <div
+                    className={`mx-auto px-4 md:px-6 flex justify-between items-center transition-all duration-500 ${scrolled
+                        ? "w-full max-w-5xl bg-white/90 backdrop-blur-xl border border-gray-200 shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] rounded-full h-14 md:h-16"
+                        : "w-full max-w-7xl bg-transparent h-16 md:h-20"
+                        }`}
+                >
                     {/* Logo */}
                     <Link href={`/${locale}`} className="flex items-center gap-2 group">
                         <img
                             src="/logo.png"
                             alt="Meteora Logo"
-                            className="h-8 md:h-10 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.1)] group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300"
+                            className={`w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.1)] group-hover:drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-500 ${scrolled ? "h-6 md:h-8" : "h-8 md:h-10"}`}
                         />
                     </Link>
 
@@ -70,7 +75,7 @@ export function Navbar() {
                                     {isActive && (
                                         <motion.div
                                             layoutId="nav-active"
-                                            className="absolute inset-0 bg-primary/10 rounded-lg border border-primary/20"
+                                            className="absolute inset-0 bg-primary/10 rounded-full border border-primary/20"
                                             transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                         />
                                     )}
@@ -81,7 +86,7 @@ export function Navbar() {
                             <LanguageSwitcher />
                             <Link
                                 href={`/${locale}#contatti`}
-                                className="px-6 py-2.5 bg-textMain text-white text-sm font-medium rounded-full hover:bg-black hover:scale-105 transition-all duration-300 shadow-md flex items-center gap-2"
+                                className={`bg-textMain text-white font-medium rounded-full hover:bg-black hover:scale-105 transition-all duration-300 shadow-md flex items-center gap-2 ${scrolled ? "px-5 py-2 text-xs" : "px-6 py-2.5 text-sm"}`}
                             >
                                 <Mail className="w-4 h-4" />
                                 {t("Nav.contact")}
@@ -92,7 +97,7 @@ export function Navbar() {
                     {/* Mobile hamburger */}
                     <button
                         onClick={() => setMobileOpen(!mobileOpen)}
-                        className="md:hidden p-2 text-textMain"
+                        className="md:hidden p-2 text-textMain relative z-50"
                         aria-label="Toggle menu"
                     >
                         {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

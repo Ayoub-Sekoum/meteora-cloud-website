@@ -1,0 +1,35 @@
+[
+  {
+    "sha": "c698bd067c8327ca0f2aaf65ca6924fa769c791c",
+    "node_id": "C_kwDORdQuYtoAKGM2OThiZDA2N2M4MzI3Y2EwZjJhYWY2NWNhNjkyNGZhNzY5Yzc5MWM",
+    "commit": "@{author=; committer=; message=fix: add force-static to sitemap and robots for static export; tree=; url=https://api.github.com/repos/Ayoub-Sekoum/meteora-cloud-website/git/commits/c698bd067c8327ca0f2aaf65ca6924fa769c791c; comment_count=0; verification=}",
+    "url": "https://api.github.com/repos/Ayoub-Sekoum/meteora-cloud-website/commits/c698bd067c8327ca0f2aaf65ca6924fa769c791c",
+    "html_url": "https://github.com/Ayoub-Sekoum/meteora-cloud-website/commit/c698bd067c8327ca0f2aaf65ca6924fa769c791c",
+    "comments_url": "https://api.github.com/repos/Ayoub-Sekoum/meteora-cloud-website/commits/c698bd067c8327ca0f2aaf65ca6924fa769c791c/comments",
+    "author": null,
+    "committer": null,
+    "parents": ""
+  },
+  {
+    "sha": "a84ae2ba6d2011d23d44371f8fa6317926c18316",
+    "node_id": "C_kwDORdQuYtoAKGE4NGFlMmJhNmQyMDExZDIzZDQ0MzcxZjhmYTYzMTc5MjZjMTgzMTY",
+    "commit": "@{author=; committer=; message=feat: jitter-style marquee logo animations - larger logos, grayscale-to-color hover, infinite scroll; tree=; url=https://api.github.com/repos/Ayoub-Sekoum/meteora-cloud-website/git/commits/a84ae2ba6d2011d23d44371f8fa6317926c18316; comment_count=0; verification=}",
+    "url": "https://api.github.com/repos/Ayoub-Sekoum/meteora-cloud-website/commits/a84ae2ba6d2011d23d44371f8fa6317926c18316",
+    "html_url": "https://github.com/Ayoub-Sekoum/meteora-cloud-website/commit/a84ae2ba6d2011d23d44371f8fa6317926c18316",
+    "comments_url": "https://api.github.com/repos/Ayoub-Sekoum/meteora-cloud-website/commits/a84ae2ba6d2011d23d44371f8fa6317926c18316/comments",
+    "author": null,
+    "committer": null,
+    "parents": ""
+  },
+  {
+    "sha": "5bab07ec19e43ddfa39f5922f5e62a76519bfba4",
+    "node_id": "C_kwDORdQuYtoAKDViYWIwN2VjMTllNDNkZGZhMzlmNTkyMmY1ZTYyYTc2NTE5YmZiYTQ",
+    "commit": "@{author=; committer=; message=fix: full opacity provider logos + floating animation + deployment script\n\n- Provider logos now full opacity (no fade) - Spring entrance animation with scale-up - Continuous floating micro-animation on icons - Larger icons and bold dark text - Added deployment.cmd for git+Cloudflare; tree=; url=https://api.github.com/repos/Ayoub-Sekoum/meteora-cloud-website/git/commits/5bab07ec19e43ddfa39f5922f5e62a76519bfba4; comment_count=0; verification=}",
+    "url": "https://api.github.com/repos/Ayoub-Sekoum/meteora-cloud-website/commits/5bab07ec19e43ddfa39f5922f5e62a76519bfba4",
+    "html_url": "https://github.com/Ayoub-Sekoum/meteora-cloud-website/commit/5bab07ec19e43ddfa39f5922f5e62a76519bfba4",
+    "comments_url": "https://api.github.com/repos/Ayoub-Sekoum/meteora-cloud-website/commits/5bab07ec19e43ddfa39f5922f5e62a76519bfba4/comments",
+    "author": null,
+    "committer": null,
+    "parents": ""
+  }
+]

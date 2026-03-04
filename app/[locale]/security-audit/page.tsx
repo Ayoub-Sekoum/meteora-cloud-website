@@ -1,12 +1,11 @@
 "use client";
 
+import { useLocale, useTranslations } from "next-intl";
 import { Shield } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { AnimatedText } from "@/components/ui/AnimatedText";
 import Link from "next/link";
-import { useLocale, useTranslations } from "next-intl";
-import { motion } from "framer-motion";
+import { AnimateIn } from "@/components/AnimateIn";
+import { AnimatedText } from "@/components/AnimatedText";
 
 export default function SecurityAudit() {
     const locale = useLocale();
@@ -14,58 +13,63 @@ export default function SecurityAudit() {
 
     return (
         <main className="min-h-screen flex flex-col items-center pt-32 pb-24 px-4 md:px-8 overflow-hidden bg-white text-gray-900">
-            <div className="w-full max-w-4xl mx-auto space-y-12 relative">
+            <div className="w-full max-w-4xl mx-auto space-y-12 relative z-10">
 
-                <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3 }}>
-                    <Link href={`/${locale}`} className="text-red-600 hover:underline text-sm flex items-center gap-2">
+                <AnimateIn delay={0.1}>
+                    <Link href={`/${locale}`} className="text-indigo-500 hover:underline text-sm flex items-center gap-2 w-fit">
                         &larr; {t("Common.backHome")}
                     </Link>
-                </motion.div>
+                </AnimateIn>
 
                 <div className="space-y-6">
-                    <AnimatedSection>
-                        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gray-50 border border-gray-200 text-red-600 font-medium">
+                    <AnimateIn delay={0.2} direction="right">
+                        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gray-50 border border-gray-200 text-indigo-500 font-medium">
                             <Shield className="w-5 h-5" /> {t("SecurityPage.badge")}
                         </div>
-                    </AnimatedSection>
+                    </AnimateIn>
 
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 leading-[1.1]">
-                        <AnimatedText text={t("SecurityPage.title")} delay={0.1} />
+                        <div className="flex flex-col">
+                            <AnimatedText text={t("SecurityPage.title")} delay={0.3} stagger={0.03} />
+                        </div>
                     </h1>
 
-                    <AnimatedSection delay={0.3}>
-                        <p className="text-xl text-gray-500 max-w-2xl leading-relaxed">
+                    <AnimateIn delay={0.8}>
+                        <p className="text-xl text-gray-500 max-w-2xl leading-relaxed font-light">
                             {t("SecurityPage.intro")}
                         </p>
-                    </AnimatedSection>
+                    </AnimateIn>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
-                    <AnimatedSection delay={0.1}>
-                        <div className="bg-white border border-gray-100 rounded-2xl p-8 space-y-4 h-full group hover:border-red-500/20 transition-all duration-500 relative overflow-hidden shadow-sm">
-                            <h3 className="text-2xl font-semibold text-gray-900 group-hover:text-red-600 transition-colors">{t("SecurityPage.vaTitle")}</h3>
-                            <p className="text-gray-500">{t("SecurityPage.vaDesc")}</p>
-                            <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-red-500/0 group-hover:bg-red-500/5 rounded-full blur-2xl transition-all duration-700" />
+                    <AnimateIn delay={1.0}>
+                        <div className="bg-white border border-gray-100 shadow-sm rounded-3xl p-8 md:p-12 space-y-6 relative overflow-hidden transition-shadow hover:shadow-xl hover:border-red-500/20 h-full group">
+                            <div className="relative z-10 space-y-4">
+                                <h3 className="text-2xl font-semibold text-gray-900 group-hover:text-red-500 transition-colors">{t("SecurityPage.vaTitle")}</h3>
+                                <p className="text-gray-500 font-light leading-relaxed">{t("SecurityPage.vaDesc")}</p>
+                            </div>
                         </div>
-                    </AnimatedSection>
-                    <AnimatedSection delay={0.2}>
-                        <div className="bg-white border border-gray-100 rounded-2xl p-8 space-y-4 h-full group hover:border-indigo-500/20 transition-all duration-500 relative overflow-hidden shadow-sm">
-                            <h3 className="text-2xl font-semibold text-gray-900 group-hover:text-indigo-500 transition-colors">{t("SecurityPage.complianceTitle")}</h3>
-                            <p className="text-gray-500">{t("SecurityPage.complianceDesc")}</p>
-                            <div className="absolute -bottom-12 -right-12 w-32 h-32 bg-indigo-500/0 group-hover:bg-indigo-500/5 rounded-full blur-2xl transition-all duration-700" />
+                    </AnimateIn>
+
+                    <AnimateIn delay={1.2}>
+                        <div className="bg-white border border-gray-100 shadow-sm rounded-3xl p-8 md:p-12 space-y-6 relative overflow-hidden transition-shadow hover:shadow-xl hover:border-indigo-500/20 h-full group">
+                            <div className="relative z-10 space-y-4">
+                                <h3 className="text-2xl font-semibold text-gray-900 group-hover:text-indigo-500 transition-colors">{t("SecurityPage.complianceTitle")}</h3>
+                                <p className="text-gray-500 font-light leading-relaxed">{t("SecurityPage.complianceDesc")}</p>
+                            </div>
                         </div>
-                    </AnimatedSection>
+                    </AnimateIn>
                 </div>
 
-                <AnimatedSection delay={0.1}>
-                    <div className="mt-16 bg-gradient-to-br from-red-50 to-gray-50 border border-red-200/50 rounded-3xl p-8 text-center space-y-6 relative overflow-hidden shadow-sm">
-                        <h2 className="text-3xl font-bold text-gray-900 relative z-10">{t("SecurityPage.ctaTitle")}</h2>
-                        <p className="text-gray-500 max-w-xl mx-auto relative z-10">{t("SecurityPage.ctaDesc")}</p>
-                        <Link href={`/${locale}#contatti`} className="relative z-10 inline-block">
-                            <Button variant="primary" size="lg" className="mt-4">{t("SecurityPage.ctaButton")}</Button>
+                <AnimateIn delay={1.4} scale>
+                    <div className="mt-16 bg-gradient-to-br from-indigo-50 to-gray-50 border border-indigo-100 rounded-[2.5rem] p-8 md:p-12 text-center space-y-6 shadow-sm">
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t("SecurityPage.ctaTitle")}</h2>
+                        <p className="text-gray-500 max-w-xl mx-auto font-light text-lg">{t("SecurityPage.ctaDesc")}</p>
+                        <Link href={`/${locale}#contatti`} className="inline-block">
+                            <Button variant="primary" size="lg" className="mt-6 rounded-full px-8 hover:scale-105 transition-transform shadow-lg shadow-indigo-500/20">{t("SecurityPage.ctaButton")}</Button>
                         </Link>
                     </div>
-                </AnimatedSection>
+                </AnimateIn>
             </div>
         </main>
     );

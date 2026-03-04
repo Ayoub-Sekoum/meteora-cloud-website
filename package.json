@@ -1,13 +1,16 @@
 {
   "name": "meteora",
-  "version": "0.1.0",
+  "version": "0.2.0-jitter-animated",
   "private": true,
+  "engines": {
+    "node": ">=18.17.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build && echo \"<meta http-equiv='refresh' content='0;url=/it' />\" > out/index.html",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npx wrangler versions upload --assets=./out"
+    "deploy": "npx wrangler pages deploy out --project-name meteora"
   },
   "dependencies": {
     "eslint": "^9.39.3",

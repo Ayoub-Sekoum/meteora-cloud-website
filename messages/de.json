@@ -6,7 +6,8 @@
         "title2b": "auf",
         "title3": "Enterprise-Niveau.",
         "subtitle": "Definitive IT-Infrastrukturen für CEOs, CTOs und IT-Manager. Keine Ausfallzeiten und maximale Leistung.",
-        "cta": "Beratung buchen"
+        "cta": "Beratung buchen",
+        "socialProof": "Cloud-Architekturen auf führenden Plattformen"
     },
     "Services": {
         "heading": "Unsere",
@@ -28,20 +29,37 @@
         "heading": "Starten wir",
         "headingFaded": "das Projekt.",
         "subtitle": "Füllen Sie das Formular aus oder senden Sie uns eine E-Mail. Wir antworten innerhalb von 24 Stunden mit einem präzisen Aktionsplan.",
-        "labelName": "Name",
+        "labelName": "Vorname",
+        "labelSurname": "Nachname",
         "labelEmail": "E-Mail",
+        "labelPhone": "Telefon",
         "labelMessage": "Was brauchen Sie?",
-        "placeholderName": "Max Mustermann",
+        "labelUpload": "Datei hochladen",
+        "placeholderName": "Max",
+        "placeholderSurname": "Mustermann",
         "placeholderEmail": "max@firma.de",
+        "placeholderPhone": "+49 170 1234567",
         "placeholderMessage": "Erzählen Sie uns von Ihrem Projekt...",
-        "send": "Anfrage senden"
+        "uploadHint": "Dateien hierher ziehen oder klicken zum Auswählen (max 30MB)",
+        "uploadSelected": "Datei ausgewählt",
+        "send": "Anfrage senden",
+        "sending": "Wird gesendet...",
+        "sent": "Anfrage gesendet!",
+        "errorSend": "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+        "errorFileSize": "Datei überschreitet das 30MB-Limit.",
+        "errorNameLetters": "Der Name darf nur Buchstaben enthalten.",
+        "errorSurnameLetters": "Der Nachname darf nur Buchstaben enthalten.",
+        "errorPhoneNumbers": "Die Telefonnummer darf nur Zahlen enthalten.",
+        "errorEmail": "Bitte geben Sie eine gültige E-Mail-Adresse mit @ ein.",
+        "privacy": "Mit dem Absenden des Formulars akzeptieren Sie unsere Datenschutzrichtlinie gemäß DSGVO."
     },
     "Nav": {
         "contact": "Kontakt"
     },
     "Common": {
         "backHome": "Zurück zur Startseite",
-        "talkToArchitect": "Mit einem Architekten sprechen"
+        "talkToArchitect": "Mit einem Architekten sprechen",
+        "skipToContent": "Zum Hauptinhalt springen"
     },
     "Footer": {
         "description": "Cloud Architecture & Consulting. Wir entwerfen skalierbare, sichere und optimierte Infrastrukturen für Ihr Unternehmen.",

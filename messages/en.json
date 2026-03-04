@@ -6,7 +6,8 @@
         "title2b": "Grade",
         "title3": "Architecture.",
         "subtitle": "Definitive IT infrastructure for CEOs, CTOs, and IT Managers. Zero downtime and maximum performance.",
-        "cta": "Book a Consultation"
+        "cta": "Book a Consultation",
+        "socialProof": "Cloud architectures on leading platforms"
     },
     "Services": {
         "heading": "Our",
@@ -28,20 +29,37 @@
         "heading": "Let's start",
         "headingFaded": "the project.",
         "subtitle": "Fill out the form or email us. We respond within 24 hours with a concise action plan.",
-        "labelName": "Name",
+        "labelName": "First Name",
+        "labelSurname": "Last Name",
         "labelEmail": "Email",
+        "labelPhone": "Phone",
         "labelMessage": "What do you need?",
-        "placeholderName": "John Doe",
+        "labelUpload": "Upload file",
+        "placeholderName": "John",
+        "placeholderSurname": "Doe",
         "placeholderEmail": "john@company.com",
+        "placeholderPhone": "+1 555 1234567",
         "placeholderMessage": "Tell us about your project...",
-        "send": "Send Request"
+        "uploadHint": "Drag files here or click to select (max 30MB)",
+        "uploadSelected": "File selected",
+        "send": "Send Request",
+        "sending": "Sending...",
+        "sent": "Request Sent!",
+        "errorSend": "There was an error sending. Please try again.",
+        "errorFileSize": "File exceeds the 30MB limit.",
+        "errorNameLetters": "Name must contain only letters.",
+        "errorSurnameLetters": "Surname must contain only letters.",
+        "errorPhoneNumbers": "Phone must contain only numbers.",
+        "errorEmail": "Please enter a valid email address with @.",
+        "privacy": "By submitting the form you accept our Privacy Policy in accordance with GDPR."
     },
     "Nav": {
         "contact": "Contact Us"
     },
     "Common": {
         "backHome": "Back to Home",
-        "talkToArchitect": "Talk to an Architect"
+        "talkToArchitect": "Talk to an Architect",
+        "skipToContent": "Skip to main content"
     },
     "Footer": {
         "description": "Cloud Architecture & Consulting. We design scalable, secure, and optimized infrastructure for your business.",
