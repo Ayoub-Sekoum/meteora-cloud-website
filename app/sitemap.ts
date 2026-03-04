@@ -1,7 +1,7 @@
 export const dynamic = "force-static";
 
 export default function sitemap() {
-    const baseUrl = "https://meteora-cloud.com"; // Replace with actual domain
+    const baseUrl = "https://metteora.uk"; // Replace with actual domain
     const locales = ["it", "en", "de"];
 
     const routes = [""].map((route) => ({

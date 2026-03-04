@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3001;
 
 // ─── CORS ────────────────────────────────────────────────
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://meteora-cloud.com'],
+    origin: ['http://localhost:3000', 'https://metteora.uk'],
     methods: ['POST', 'OPTIONS'],
 }));
 app.use(express.json());
@@ -291,7 +291,7 @@ app.post('/api/contact', upload.single('file'), async (req, res) => {
 
             // Crea sottocartella con data + nome cliente
             driveFolder = await createDriveFolder(nome, cognome);
-            
+
             if (driveFolder) {
                 // Carica il file nella sottocartella
                 fileInfo = await uploadFileToDrive(req.file, driveFolder.id);

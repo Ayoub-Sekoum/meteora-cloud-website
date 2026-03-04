@@ -20,9 +20,9 @@ export const metadata = {
     },
     alternates: {
         languages: {
-            'it': 'https://meteora-cloud.com/it',
-            'en': 'https://meteora-cloud.com/en',
-            'de': 'https://meteora-cloud.com/de',
+            'it': 'https://metteora.uk/it',
+            'en': 'https://metteora.uk/en',
+            'de': 'https://metteora.uk/de',
         }
     }
 };

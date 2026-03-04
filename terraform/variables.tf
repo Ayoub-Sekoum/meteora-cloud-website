@@ -1,9 +1,10 @@
 variable "domain_name" {
   type    = string
-  default = "meteora-cloud.com" # Sostituire
+  default = "metteora.uk" # Sostituire
 }
 
-variable "contact_email" {
-  type    = string
-  default = "leads@meteora-cloud.com" # Sostituire
+variable "email_contact" {
+  description = "Indirizzo email per i contatti"
+  type        = string
+  default = "leads@metteora.uk" # Sostituire
 }

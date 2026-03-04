@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /private/
 
-Sitemap: https://meteora-cloud.com/sitemap.xml
+Sitemap: https://metteora.uk/sitemap.xml

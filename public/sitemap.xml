@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://meteora-cloud.com/</loc>
+    <loc>https://metteora.uk/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://meteora-cloud.com/it</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://meteora-cloud.com/it"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://meteora-cloud.com/en"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://meteora-cloud.com/de"/>
+    <loc>https://metteora.uk/it</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://metteora.uk/it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://metteora.uk/en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://metteora.uk/de"/>
   </url>
   <url>
-    <loc>https://meteora-cloud.com/en</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://meteora-cloud.com/it"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://meteora-cloud.com/en"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://meteora-cloud.com/de"/>
+    <loc>https://metteora.uk/en</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://metteora.uk/it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://metteora.uk/en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://metteora.uk/de"/>
   </url>
   <url>
-    <loc>https://meteora-cloud.com/de</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://meteora-cloud.com/it"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://meteora-cloud.com/en"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://meteora-cloud.com/de"/>
+    <loc>https://metteora.uk/de</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://metteora.uk/it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://metteora.uk/en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://metteora.uk/de"/>
   </url>
 </urlset>
