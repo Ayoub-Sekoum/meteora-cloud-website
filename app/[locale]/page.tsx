@@ -331,17 +331,18 @@ export default function Home() {
             <section ref={heroRef} className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 pt-24 pb-32 md:pb-40 border-b border-gray-200 overflow-hidden">
                 <FloatingGrid />
 
-                {/* Triangle logo – large, centered, translucent, dissolves on scroll */}
+                {/* Full logo – large, centered, translucent, dissolves on scroll */}
                 <motion.div
                     style={{ opacity: logoOpacity, scale: logoScale }}
                     className="absolute inset-0 flex items-center justify-center pointer-events-none z-0"
                 >
                     <Image
-                        src="/logo-triangolo.png"
+                        src="/logo.png"
                         alt=""
-                        width={700}
-                        height={700}
-                        className="w-[50vw] max-w-[700px] h-auto object-contain select-none"
+                        width={1000}
+                        height={400}
+                        className="w-[70vw] max-w-[1000px] h-auto object-contain select-none"
+                        style={{ mixBlendMode: 'multiply' }}
                         priority
                     />
                 </motion.div>
@@ -489,28 +490,21 @@ export default function Home() {
 
             {/* ═══ ABOUT ══════════════════════════════════ */}
             <section className="w-full px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-white border-b border-gray-200">
-                <div className="max-w-[1400px] mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
-                    <AnimateIn className="w-full lg:w-1/2">
-                        <div className="relative aspect-square max-w-sm sm:max-w-md mx-auto lg:mx-0 rounded-[3rem] overflow-hidden bg-gray-100 border border-gray-200 shadow-2xl">
-                            <div className="absolute inset-4 rounded-[2.5rem] border border-white/50 z-20 pointer-events-none" />
-                            <img src="/mia-foto.png" alt="Ayoub Sekoum" className="w-full h-full object-cover transition-all duration-700 scale-105 hover:scale-100" />
-                        </div>
-                    </AnimateIn>
-
-                    <div className="w-full lg:w-1/2 flex flex-col gap-8 sm:gap-10">
-                        <AnimateIn delay={0.2} direction="right">
+                <div className="max-w-[1400px] mx-auto w-full flex flex-col items-center text-center gap-12">
+                    <div className="w-full max-w-3xl flex flex-col gap-8 sm:gap-10">
+                        <AnimateIn delay={0.2}>
                             <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight">Ayoub <br /><span className="text-gray-400">Sekoum</span></h2>
                             <p className="text-lg sm:text-xl text-red-600 font-medium mt-4 tracking-wider uppercase">{t("About.role")}</p>
                         </AnimateIn>
 
-                        <AnimateIn delay={0.3} direction="right">
-                            <p className="text-lg sm:text-xl text-gray-500 leading-relaxed font-light">
+                        <AnimateIn delay={0.3}>
+                            <p className="text-lg sm:text-xl text-gray-500 leading-relaxed font-light italic">
                                 &ldquo;{t("About.quote")}&rdquo;
                             </p>
                         </AnimateIn>
 
-                        <AnimateIn delay={0.4} direction="right">
-                            <div className="flex flex-wrap gap-3 sm:gap-4">
+                        <AnimateIn delay={0.4}>
+                            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
                                 {[
                                     { color: "text-blue-500", label: "Azure Administrator", link: "https://learn.microsoft.com/it-it/users/ayoubsekoum-7090/credentials/bbcebc91c9d34a8b" },
                                     { color: "text-emerald-500", label: "Security & Compliance", link: "https://learn.microsoft.com/it-it/users/ayoubsekoum-3690/credentials/7558ab5004567733" },

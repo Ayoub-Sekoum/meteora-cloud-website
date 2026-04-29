@@ -45,7 +45,7 @@ export default async function RootLayout({
 
     return (
         <html lang={locale} className={`${inter.variable} bg-white scroll-smooth`}>
-            <body className="bg-white text-gray-900 antialiased">
+            <body className="bg-white text-gray-900 antialiased relative">
                 <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-[9999] bg-gray-900 text-white px-4 py-2 rounded-md font-medium shadow-2xl outline-none ring-2 ring-indigo-500">
                     {t("skipToContent")}
                 </a>
